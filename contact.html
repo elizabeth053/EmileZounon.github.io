@@ -1,151 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://emilezounon.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-ancestors 'none';">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | EGZ</title>
-    <meta name="description" content="Get in touch with EGZ. EdTech & AI Strategist.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-t1nt8BQoYMLFN5p42tRAtuAAFQaCQODekUVeKKZrEnEyp4H2R0RHFz0KWpmj7i8g" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="alternate" hreflang="en" href="https://emilezounon.com/contact.html">
-    <link rel="alternate" hreflang="fr" href="https://emilezounon.com/fr/contact.html">
-    <link rel="alternate" hreflang="zh-CN" href="https://emilezounon.com/zh/contact.html">
-    <link rel="alternate" hreflang="ja" href="https://emilezounon.com/ja/contact.html">
-    <link rel="alternate" hreflang="es" href="https://emilezounon.com/es/contact.html">
-    <link rel="alternate" hreflang="pt-BR" href="https://emilezounon.com/pt/contact.html">
-    <link rel="alternate" hreflang="x-default" href="https://emilezounon.com/contact.html">
-    <link rel="canonical" href="https://emilezounon.com/contact.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suggest a Resource — Venture Lens</title>
+  <meta name="description" content="Suggest a resource, company, or funding round to add to Venture Lens." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">EGZ</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="work.html" class="nav-link">Work</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
-                <li class="nav-lang">
-                    <button class="lang-toggle" id="lang-toggle" aria-label="Select language">
-                        <i class="fas fa-globe"></i>
-                        <span class="lang-current">EN</span>
-                        <i class="fas fa-chevron-down lang-chevron"></i>
-                    </button>
-                    <ul class="lang-dropdown">
-                        <li><a href="#" class="lang-option" data-lang="en">🇺🇸 English</a></li>
-                        <li><a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a></li>
-                        <li><a href="#" class="lang-option" data-lang="zh">🇨🇳 中文</a></li>
-                        <li><a href="#" class="lang-option" data-lang="ja">🇯🇵 日本語</a></li>
-                        <li><a href="#" class="lang-option" data-lang="es">🇪🇸 Español</a></li>
-                        <li><a href="#" class="lang-option" data-lang="pt">🇧🇷 Português</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Venture<span>Lens</span></a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="ai-deeptech.html" class="nav__link">AI &amp; Deep Tech</a>
+        <a href="fintech-web3.html" class="nav__link">FinTech &amp; Web3</a>
+        <a href="healthtech-biotech.html" class="nav__link">HealthTech &amp; BioTech</a>
+        <a href="climate-energy.html" class="nav__link">Climate &amp; Energy</a>
+        <a href="wearables-jewellery.html" class="nav__link">Wearables &amp; Jewellery</a>
+      </div>
+      <div class="nav__actions">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="contact.html" class="nav__cta active">Suggest a Resource</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileNav">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="ai-deeptech.html" class="nav__link">AI &amp; Deep Tech</a>
+      <a href="fintech-web3.html" class="nav__link">FinTech &amp; Web3</a>
+      <a href="healthtech-biotech.html" class="nav__link">HealthTech &amp; BioTech</a>
+      <a href="climate-energy.html" class="nav__link">Climate &amp; Energy</a>
+      <a href="wearables-jewellery.html" class="nav__link">Wearables &amp; Jewellery</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="contact.html" class="nav__link active">Suggest a Resource</a>
+    </div>
+  </nav>
+
+  <!-- CONTACT HERO -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="fade-in" style="max-width: 560px;">
+        <div class="section__label" style="--accent: var(--accent-ai);">Contribute</div>
+        <h1 class="section__title" style="font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: var(--space-md);">Suggest a Resource</h1>
+        <p style="font-size: 0.9375rem; color: var(--color-text-muted); line-height: 1.65;">Know a tool, report, newsletter, startup, or recent funding round that belongs in Venture Lens? Send it over. Every suggestion is reviewed and the best ones make it onto the site.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="fade-in">
+        <form
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+          class="form-card"
+        >
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g. Jane Smith"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="jane@example.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="type">Suggestion Type</label>
+            <select id="type" name="type" required>
+              <option value="" disabled selected>Select a type</option>
+              <option value="resource">Resource (report, newsletter, tool, podcast)</option>
+              <option value="company">Company (for the startup directory)</option>
+              <option value="deal">Funding Round (for deal flow)</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="vertical">Industry Vertical</label>
+            <select id="vertical" name="vertical">
+              <option value="" disabled selected>Select a vertical</option>
+              <option value="ai">AI &amp; Deep Tech</option>
+              <option value="fintech">FinTech &amp; Web3</option>
+              <option value="health">HealthTech &amp; BioTech</option>
+              <option value="climate">Climate &amp; Energy</option>
+              <option value="wearables">Wearables &amp; Jewellery</option>
+              <option value="cross">Cross-vertical / General</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="name-field">Name / Title</label>
+            <input
+              type="text"
+              id="name-field"
+              name="suggestion_name"
+              placeholder="e.g. State of AI Report, Recursion Pharmaceuticals, Stripe $6.5B round"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="url">URL</label>
+            <input
+              type="url"
+              id="url"
+              name="url"
+              placeholder="https://example.com"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="notes">Why should this be included?</label>
+            <textarea
+              id="notes"
+              name="notes"
+              placeholder="A brief description of what it is and why it's worth including in Venture Lens..."
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary" style="width: 100%; justify-content: center;">
+            Send Suggestion
+          </button>
+        </form>
+
+        <p style="margin-top: var(--space-lg); font-size: 0.8125rem; color: var(--color-text-light);">
+          Submissions are reviewed manually. No spam, no auto-add — every entry is evaluated against the curation bar.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">Venture<span>Lens</span></div>
+        <p class="footer__tagline">A curated lens on the venture landscape.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Verticals</h4>
+        <div class="footer__links">
+          <a href="ai-deeptech.html" class="footer__link">AI &amp; Deep Tech</a>
+          <a href="fintech-web3.html" class="footer__link">FinTech &amp; Web3</a>
+          <a href="healthtech-biotech.html" class="footer__link">HealthTech &amp; BioTech</a>
+          <a href="climate-energy.html" class="footer__link">Climate &amp; Energy</a>
+          <a href="wearables-jewellery.html" class="footer__link">Wearables &amp; Jewellery</a>
         </div>
-    </nav>
-
-    <header class="page-header">
-        <div class="container">
-            <h1>Let's Connect</h1>
-            <p>I'm always open to conversations about education, AI, and impact</p>
+      </div>
+      <div class="footer__col">
+        <h4>Hub</h4>
+        <div class="footer__links">
+          <a href="about.html" class="footer__link">About</a>
+          <a href="contact.html" class="footer__link">Suggest a Resource</a>
         </div>
-    </header>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span class="footer__copy">© 2025 VentureLens. Curated by elizabeth053.</span>
+    </div>
+  </footer>
 
-    <main>
-        <section class="section">
-            <div class="container">
-                <div class="contact-content">
-
-                    <div class="contact-stats fade-in">
-                        <div class="stat">
-                            <div class="stat-number">1,000+</div>
-                            <div class="stat-label">Students Reached</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">2M+</div>
-                            <div class="stat-label">Learners (IBM)</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Certifications</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">3</div>
-                            <div class="stat-label">Countries</div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Form -->
-                    <form id="contact-form" class="contact-form fade-in" novalidate>
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" required placeholder="Jane Smith">
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" required placeholder="jane@example.com">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="I'd love to connect about..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary form-submit">
-                            Send Message <i class="fas fa-paper-plane"></i>
-                        </button>
-                        <div id="form-status" class="form-status"></div>
-                    </form>
-
-                    <div class="fade-in" style="margin: 0 0 3rem;">
-                        <p style="font-size:0.85rem; color:var(--text-light); margin-bottom:1rem;">Or connect directly on LinkedIn</p>
-                        <a href="https://www.linkedin.com/in/emile-giovannie-zounon" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-                            <i class="fab fa-linkedin"></i> LinkedIn
-                        </a>
-                    </div>
-
-                    <div class="fade-in">
-                        <h2 style="margin-bottom: 1.5rem;">Let's connect if you're working on</h2>
-                        <ul class="connect-list">
-                            <li><i class="fas fa-brain"></i> AI in education</li>
-                            <li><i class="fas fa-briefcase"></i> Workforce development</li>
-                            <li><i class="fas fa-landmark"></i> Digital policy</li>
-                            <li><i class="fas fa-shield-alt"></i> Responsible AI</li>
-                            <li><i class="fas fa-chart-line"></i> Upskilling pathways</li>
-                        </ul>
-                    </div>
-
-                    <div class="quote-block fade-in">
-                        <p style="margin-bottom: 0;">My life goal is to help individuals and teams become comfortable with technology.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-name">Emile Giovannie ZOUNON</p>
-            <p class="footer-tagline">EdTech & AI Strategist</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/emile-giovannie-zounon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-            <p class="footer-copy">&copy; 2026 Emile Giovannie ZOUNON. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="/js/main.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

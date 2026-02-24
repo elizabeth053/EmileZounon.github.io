@@ -1,185 +1,351 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://emilezounon.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-ancestors 'none';">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EGZ | EdTech & AI Strategist</title>
-    <meta name="description" content="Portfolio of EGZ. Designing learning experiences that create economic mobility.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha384-t1nt8BQoYMLFN5p42tRAtuAAFQaCQODekUVeKKZrEnEyp4H2R0RHFz0KWpmj7i8g" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="alternate" hreflang="en" href="https://emilezounon.com/">
-    <link rel="alternate" hreflang="fr" href="https://emilezounon.com/fr/index.html">
-    <link rel="alternate" hreflang="zh-CN" href="https://emilezounon.com/zh/index.html">
-    <link rel="alternate" hreflang="ja" href="https://emilezounon.com/ja/index.html">
-    <link rel="alternate" hreflang="es" href="https://emilezounon.com/es/index.html">
-    <link rel="alternate" hreflang="pt-BR" href="https://emilezounon.com/pt/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://emilezounon.com/">
-    <link rel="canonical" href="https://emilezounon.com/">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venture Lens — A Curated Lens on the Venture Landscape</title>
+  <meta name="description" content="Venture Lens is a curated resource hub for venture research — industry reports, deal flow, and startup directories across AI, FinTech, HealthTech, Climate, and Wearables." />
+  <meta property="og:title" content="Venture Lens" />
+  <meta property="og:description" content="A curated lens on the venture landscape." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">EGZ</a>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="work.html" class="nav-link">Work</a></li>
-                <li><a href="blog.html" class="nav-link">Blog</a></li>
-                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-lang">
-                    <button class="lang-toggle" id="lang-toggle" aria-label="Select language">
-                        <i class="fas fa-globe"></i>
-                        <span class="lang-current">EN</span>
-                        <i class="fas fa-chevron-down lang-chevron"></i>
-                    </button>
-                    <ul class="lang-dropdown">
-                        <li><a href="#" class="lang-option" data-lang="en">🇺🇸 English</a></li>
-                        <li><a href="#" class="lang-option" data-lang="fr">🇫🇷 Français</a></li>
-                        <li><a href="#" class="lang-option" data-lang="zh">🇨🇳 中文</a></li>
-                        <li><a href="#" class="lang-option" data-lang="ja">🇯🇵 日本語</a></li>
-                        <li><a href="#" class="lang-option" data-lang="es">🇪🇸 Español</a></li>
-                        <li><a href="#" class="lang-option" data-lang="pt">🇧🇷 Português</a></li>
-                    </ul>
-                </li>
-            </ul>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Venture<span>Lens</span></a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link active">Home</a>
+        <a href="ai-deeptech.html" class="nav__link">AI &amp; Deep Tech</a>
+        <a href="fintech-web3.html" class="nav__link">FinTech &amp; Web3</a>
+        <a href="healthtech-biotech.html" class="nav__link">HealthTech &amp; BioTech</a>
+        <a href="climate-energy.html" class="nav__link">Climate &amp; Energy</a>
+        <a href="wearables-jewellery.html" class="nav__link">Wearables &amp; Jewellery</a>
+      </div>
+      <div class="nav__actions">
+        <a href="about.html" class="nav__link">About</a>
+        <a href="contact.html" class="nav__cta">Suggest a Resource</a>
+      </div>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobileNav">
+      <a href="index.html" class="nav__link active">Home</a>
+      <a href="ai-deeptech.html" class="nav__link">AI &amp; Deep Tech</a>
+      <a href="fintech-web3.html" class="nav__link">FinTech &amp; Web3</a>
+      <a href="healthtech-biotech.html" class="nav__link">HealthTech &amp; BioTech</a>
+      <a href="climate-energy.html" class="nav__link">Climate &amp; Energy</a>
+      <a href="wearables-jewellery.html" class="nav__link">Wearables &amp; Jewellery</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="contact.html" class="nav__link">Suggest a Resource</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero__inner">
+      <div class="hero__eyebrow">Venture Research Hub</div>
+      <h1 class="hero__title">A curated <em>lens</em> on the venture landscape</h1>
+      <p class="hero__subtitle">Hand-picked resources, deal flow intelligence, and startup directories across five high-conviction industry verticals — built for operators, investors, and founders.</p>
+      <div class="hero__actions">
+        <a href="#verticals" class="btn btn--primary">Browse Verticals</a>
+        <a href="about.html" class="btn btn--outline">About this Hub</a>
+      </div>
+      <div class="stat-bar fade-in">
+        <div class="stat">
+          <span class="stat__number">5</span>
+          <span class="stat__label">Industry Verticals</span>
         </div>
-    </nav>
-
-    <main>
-        <section class="hero">
-            <div class="hero-grain" aria-hidden="true"></div>
-            <span class="hero-watermark" aria-hidden="true">EGZ</span>
-            <div class="container">
-                <div class="hero-name">
-                    <span class="hero-name-first">Emile Giovannie</span>
-                    <span class="hero-name-last">ZOUNON</span>
-                </div>
-                <div class="hero-rule"></div>
-                <p class="hero-tagline">EdTech &amp; AI Strategist</p>
-                <p class="hero-subtitle">Designing learning experiences that create economic mobility</p>
-                <a href="work.html" class="btn btn-primary hero-cta">See My Work <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </section>
-
-        <section class="section" id="featured-work">
-            <div class="container">
-                <div class="section-title fade-in">
-                    <h2>Featured Work</h2>
-                    <p>Selected projects in learning design, AI, and workforce development</p>
-                </div>
-                <div class="card-grid">
-                    <div class="card fade-in">
-                        <span class="card-type">Web App</span>
-                        <h3 class="card-title">Karate Attendance Tracker</h3>
-                        <p class="card-description">Attendance tracking app for the Karate Black Belt Program 2026. Features an interactive grid, analytics, charts, Word doc import, and PDF export.</p>
-                        <div class="card-tags">
-                            <span class="tag tag-tech">React</span>
-                            <span class="tag tag-tech">Recharts</span>
-                            <span class="tag tag-design">Data Visualization</span>
-                        </div>
-                        <span class="card-link" style="cursor: default; opacity: 0.5;"><i class="fas fa-lock"></i> Internal Use Only</span>
-                    </div>
-                    <div class="card fade-in">
-                        <span class="card-type">Interactive Map</span>
-                        <h3 class="card-title">Pre-Colonial Lenape Settlements of the Bronx</h3>
-                        <p class="card-description">Interactive map documenting Indigenous geography of the Bronx before European contact (pre-1609). 12 settlement sites, 7 toggleable layers, and a timeline spanning 4000 BCE to 2015.</p>
-                        <div class="card-tags">
-                            <span class="tag tag-tech">Google Maps API</span>
-                            <span class="tag tag-education">Indigenous History</span>
-                            <span class="tag tag-design">Data Visualization</span>
-                        </div>
-                        <a href="https://emilezounon.github.io/lenape-bronx-map/" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fas fa-external-link-alt"></i> Explore Map</a>
-                    </div>
-                    <div class="card fade-in">
-                        <span class="card-type">Articulate Rise Course</span>
-                        <h3 class="card-title">Building Custom GPTs</h3>
-                        <p class="card-description">No-code guide teaching the OCTR prompting framework (Objective, Context, Task, Rules) for building Custom GPTs. Includes interactive knowledge checks, video walkthroughs, and a hands-on Meeting Notes Assistant build.</p>
-                        <div class="card-tags">
-                            <span class="tag tag-ai">Custom GPTs</span>
-                            <span class="tag tag-design">Articulate Rise</span>
-                            <span class="tag tag-tech">Prompt Engineering</span>
-                        </div>
-                        <a href="https://share.articulate.com/RtbTuvTpj7rcIsfQ0JK-b" target="_blank" rel="noopener noreferrer" class="card-link"><i class="fas fa-external-link-alt"></i> View in Rise</a>
-                    </div>
-                    <div class="card fade-in">
-                        <span class="card-type">Program Design</span>
-                        <h3 class="card-title">IBM SkillsBuild</h3>
-                        <p class="card-description">Managed 105 learning pathways for 30 nonprofit and academic partners serving 2M+ learners. Built 10 custom GPTs for workflow automation.</p>
-                        <div class="card-tags">
-                            <span class="tag tag-tech">IBM</span>
-                            <span class="tag tag-ai">AI Automation</span>
-                            <span class="tag tag-education">Scale</span>
-                        </div>
-                        <a href="work.html" class="card-link">View Project <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section" style="background-color: var(--light);">
-            <div class="container">
-                <div class="section-title fade-in">
-                    <h2>What I Do</h2>
-                </div>
-                <div class="columns">
-                    <div class="column fade-in">
-                        <div class="column-icon"><i class="fas fa-graduation-cap"></i></div>
-                        <h3>Learning Experience Design</h3>
-                        <p>Creating engaging, accessible courses and curricula that drive real learning outcomes using Articulate 360, Canvas, and modern instructional design practices.</p>
-                    </div>
-                    <div class="column fade-in">
-                        <div class="column-icon"><i class="fas fa-robot"></i></div>
-                        <h3>AI Strategy & Integration</h3>
-                        <p>Designing AI-powered workflows and custom GPTs that automate processes, enhance learning, and bring cutting-edge technology to education and workforce development.</p>
-                    </div>
-                    <div class="column fade-in">
-                        <div class="column-icon"><i class="fas fa-users"></i></div>
-                        <h3>Workforce Development</h3>
-                        <p>Building scalable programs that create economic mobility through digital skills training, reaching learners across the United States, Africa, and beyond.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-name">Emile Giovannie ZOUNON</p>
-            <p class="footer-tagline">EdTech & AI Strategist</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/emile-giovannie-zounon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-            <p class="footer-copy">&copy; 2026 Emile Giovannie ZOUNON. All rights reserved.</p>
+        <div class="stat">
+          <span class="stat__number">30+</span>
+          <span class="stat__label">Curated Resources</span>
         </div>
-    </footer>
+        <div class="stat">
+          <span class="stat__number">30+</span>
+          <span class="stat__label">Directory Companies</span>
+        </div>
+        <div class="stat">
+          <span class="stat__number">25+</span>
+          <span class="stat__label">Deal Flow Entries</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="/js/main.js"></script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Emile Giovannie ZOUNON",
-      "url": "https://emilezounon.com",
-      "jobTitle": "EdTech & AI Strategist",
-      "description": "Designing learning experiences that create economic mobility.",
-      "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "Harvard University" },
-        { "@type": "CollegeOrUniversity", "name": "Lehman College" }
-      ],
-      "sameAs": [
-        "https://www.linkedin.com/in/emile-giovannie-zounon"
-      ]
-    }
-    </script>
+  <!-- ===== BROWSE BY VERTICAL ===== -->
+  <section class="section" id="verticals">
+    <div class="container">
+      <div class="section__header fade-in">
+        <div class="section__label" style="--accent: var(--accent-ai);">Browse</div>
+        <h2 class="section__title">Industry Verticals</h2>
+        <p class="section__subtitle">Dive into a curated vertical for resources, recent deals, and notable companies.</p>
+      </div>
+      <div class="grid grid--auto fade-in-children">
+
+        <a href="ai-deeptech.html" class="vertical-card">
+          <div class="vertical-card__accent" style="background: var(--accent-ai);"></div>
+          <div class="vertical-card__body">
+            <div class="vertical-card__icon">🧠</div>
+            <div class="vertical-card__name">AI &amp; Deep Tech</div>
+            <p class="vertical-card__desc">Foundation models, robotics, semiconductor infrastructure, and the research powering the next wave of compute.</p>
+          </div>
+          <div class="vertical-card__footer" style="color: var(--accent-ai);">
+            Explore vertical <span>→</span>
+          </div>
+        </a>
+
+        <a href="fintech-web3.html" class="vertical-card">
+          <div class="vertical-card__accent" style="background: var(--accent-fintech);"></div>
+          <div class="vertical-card__body">
+            <div class="vertical-card__icon">💳</div>
+            <div class="vertical-card__name">FinTech &amp; Web3</div>
+            <p class="vertical-card__desc">Embedded finance, digital assets, payments infrastructure, and the decentralized future of financial services.</p>
+          </div>
+          <div class="vertical-card__footer" style="color: var(--accent-fintech);">
+            Explore vertical <span>→</span>
+          </div>
+        </a>
+
+        <a href="healthtech-biotech.html" class="vertical-card">
+          <div class="vertical-card__accent" style="background: var(--accent-health);"></div>
+          <div class="vertical-card__body">
+            <div class="vertical-card__icon">🧬</div>
+            <div class="vertical-card__name">HealthTech &amp; BioTech</div>
+            <p class="vertical-card__desc">Drug discovery, digital therapeutics, genomics, and the convergence of biology and software reshaping medicine.</p>
+          </div>
+          <div class="vertical-card__footer" style="color: var(--accent-health);">
+            Explore vertical <span>→</span>
+          </div>
+        </a>
+
+        <a href="climate-energy.html" class="vertical-card">
+          <div class="vertical-card__accent" style="background: var(--accent-climate);"></div>
+          <div class="vertical-card__body">
+            <div class="vertical-card__icon">⚡</div>
+            <div class="vertical-card__name">Climate &amp; Energy</div>
+            <p class="vertical-card__desc">Clean energy, carbon markets, grid modernization, and the technologies accelerating the decarbonization transition.</p>
+          </div>
+          <div class="vertical-card__footer" style="color: var(--accent-climate);">
+            Explore vertical <span>→</span>
+          </div>
+        </a>
+
+        <a href="wearables-jewellery.html" class="vertical-card">
+          <div class="vertical-card__accent" style="background: var(--accent-wearables);"></div>
+          <div class="vertical-card__body">
+            <div class="vertical-card__icon">💍</div>
+            <div class="vertical-card__name">Wearables &amp; Jewellery</div>
+            <p class="vertical-card__desc">Smart accessories, health-sensing wearables, and the intersection of fashion, technology, and personal data.</p>
+          </div>
+          <div class="vertical-card__footer" style="color: var(--accent-wearables);">
+            Explore vertical <span>→</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LATEST DEALS ===== -->
+  <section class="section section--alt" id="deals">
+    <div class="container">
+      <div class="section__header fade-in">
+        <div class="section__label" style="--accent: var(--accent-fintech);">Deal Flow</div>
+        <h2 class="section__title">Latest Funding Rounds</h2>
+        <p class="section__subtitle">A selection of notable recent deals across the verticals we track.</p>
+      </div>
+      <div class="grid grid--auto fade-in-children">
+
+        <div class="deal-card">
+          <div class="deal-card__header">
+            <div class="deal-card__company">xAI</div>
+            <div class="deal-card__amount">$6B</div>
+          </div>
+          <div class="deal-card__meta">
+            <span class="deal-tag">Series B</span>
+            <span class="deal-tag">AI</span>
+          </div>
+          <p class="deal-card__desc">Elon Musk's AI lab behind the Grok model raised a landmark round, valuing the company at $50B.</p>
+          <div class="deal-card__footer">
+            <span class="deal-card__date">Dec 2024</span>
+            <a href="ai-deeptech.html" class="deal-card__source">AI &amp; Deep Tech →</a>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-card__header">
+            <div class="deal-card__company">Wayve</div>
+            <div class="deal-card__amount">$1.05B</div>
+          </div>
+          <div class="deal-card__meta">
+            <span class="deal-tag">Series C</span>
+            <span class="deal-tag">AI / Autonomous</span>
+          </div>
+          <p class="deal-card__desc">Embodied AI startup for autonomous driving raised a record UK round led by SoftBank, Microsoft, and NVIDIA.</p>
+          <div class="deal-card__footer">
+            <span class="deal-card__date">May 2024</span>
+            <a href="ai-deeptech.html" class="deal-card__source">AI &amp; Deep Tech →</a>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-card__header">
+            <div class="deal-card__company">Stripe</div>
+            <div class="deal-card__amount">$694M</div>
+          </div>
+          <div class="deal-card__meta">
+            <span class="deal-tag">Secondary</span>
+            <span class="deal-tag">FinTech</span>
+          </div>
+          <p class="deal-card__desc">Payments giant Stripe ran a secondary tender offer, maintaining a $70B valuation ahead of a potential IPO.</p>
+          <div class="deal-card__footer">
+            <span class="deal-card__date">Feb 2024</span>
+            <a href="fintech-web3.html" class="deal-card__source">FinTech &amp; Web3 →</a>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-card__header">
+            <div class="deal-card__company">Recursion Pharmaceuticals</div>
+            <div class="deal-card__amount">$150M</div>
+          </div>
+          <div class="deal-card__meta">
+            <span class="deal-tag">Public / PIPE</span>
+            <span class="deal-tag">BioTech / AI</span>
+          </div>
+          <p class="deal-card__desc">AI-driven drug discovery platform raised a PIPE to accelerate its clinical pipeline, backed by NVIDIA.</p>
+          <div class="deal-card__footer">
+            <span class="deal-card__date">Jan 2024</span>
+            <a href="healthtech-biotech.html" class="deal-card__source">HealthTech &amp; BioTech →</a>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-card__header">
+            <div class="deal-card__company">Form Energy</div>
+            <div class="deal-card__amount">$405M</div>
+          </div>
+          <div class="deal-card__meta">
+            <span class="deal-tag">Series E</span>
+            <span class="deal-tag">Climate / Energy</span>
+          </div>
+          <p class="deal-card__desc">Long-duration iron-air battery company raised to scale manufacturing ahead of grid-scale deployments.</p>
+          <div class="deal-card__footer">
+            <span class="deal-card__date">Nov 2023</span>
+            <a href="climate-energy.html" class="deal-card__source">Climate &amp; Energy →</a>
+          </div>
+        </div>
+
+        <div class="deal-card">
+          <div class="deal-card__header">
+            <div class="deal-card__company">Oura Ring</div>
+            <div class="deal-card__amount">$75M</div>
+          </div>
+          <div class="deal-card__meta">
+            <span class="deal-tag">Series D</span>
+            <span class="deal-tag">Wearables</span>
+          </div>
+          <p class="deal-card__desc">Health-tracking ring maker raised to expand its sensor suite and deepen clinical-grade capabilities.</p>
+          <div class="deal-card__footer">
+            <span class="deal-card__date">Feb 2024</span>
+            <a href="wearables-jewellery.html" class="deal-card__source">Wearables &amp; Jewellery →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED RESOURCES ===== -->
+  <section class="section" id="resources">
+    <div class="container">
+      <div class="section__header fade-in">
+        <div class="section__label" style="--accent: var(--accent-wearables);">Resources</div>
+        <h2 class="section__title">Featured Resources</h2>
+        <p class="section__subtitle">Top picks from across the verticals — reports, newsletters, and tools worth bookmarking.</p>
+      </div>
+      <div class="grid grid--auto fade-in-children">
+
+        <div class="resource-card" style="--accent: var(--accent-ai); --accent-light: rgba(79,70,229,0.08);">
+          <span class="resource-card__type">Report</span>
+          <div class="resource-card__name">State of AI Report — Nathan Benaich</div>
+          <p class="resource-card__desc">Comprehensive annual review of the most important developments in AI research, industry, and geopolitics.</p>
+          <a href="https://www.stateof.ai" target="_blank" rel="noopener" class="resource-card__link">Visit resource</a>
+        </div>
+
+        <div class="resource-card" style="--accent: var(--accent-fintech); --accent-light: rgba(5,150,105,0.08);">
+          <span class="resource-card__type">Newsletter</span>
+          <div class="resource-card__name">Fintech Brainfood — Simon Taylor</div>
+          <p class="resource-card__desc">Weekly deep-dives on payments, banking, and digital assets — sharp analysis from a practitioner perspective.</p>
+          <a href="https://www.fintechbrainfood.com" target="_blank" rel="noopener" class="resource-card__link">Visit resource</a>
+        </div>
+
+        <div class="resource-card" style="--accent: var(--accent-health); --accent-light: rgba(225,29,72,0.08);">
+          <span class="resource-card__type">Database</span>
+          <div class="resource-card__name">ClinicalTrials.gov</div>
+          <p class="resource-card__desc">The definitive global database of registered clinical trials — essential for tracking drug and device pipelines.</p>
+          <a href="https://clinicaltrials.gov" target="_blank" rel="noopener" class="resource-card__link">Visit resource</a>
+        </div>
+
+        <div class="resource-card" style="--accent: var(--accent-climate); --accent-light: rgba(217,119,6,0.08);">
+          <span class="resource-card__type">Newsletter</span>
+          <div class="resource-card__name">Heatmap News</div>
+          <p class="resource-card__desc">Authoritative journalism on climate tech, clean energy policy, and the companies building the energy transition.</p>
+          <a href="https://heatmap.news" target="_blank" rel="noopener" class="resource-card__link">Visit resource</a>
+        </div>
+
+        <div class="resource-card" style="--accent: var(--accent-wearables); --accent-light: rgba(124,58,237,0.08);">
+          <span class="resource-card__type">Research</span>
+          <div class="resource-card__name">IDC Wearables Market Reports</div>
+          <p class="resource-card__desc">Quarterly market sizing, shipment data, and competitive landscape research for the global wearables industry.</p>
+          <a href="https://www.idc.com/tracker/showproductinfo.jsp?containerId=IDC_P26602" target="_blank" rel="noopener" class="resource-card__link">Visit resource</a>
+        </div>
+
+        <div class="resource-card" style="--accent: var(--accent-ai); --accent-light: rgba(79,70,229,0.08);">
+          <span class="resource-card__type">Tool</span>
+          <div class="resource-card__name">Hugging Face</div>
+          <p class="resource-card__desc">The central hub for open-source AI models, datasets, and demos — the GitHub of the machine learning world.</p>
+          <a href="https://huggingface.co" target="_blank" rel="noopener" class="resource-card__link">Visit resource</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">Venture<span>Lens</span></div>
+        <p class="footer__tagline">A curated lens on the venture landscape.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Verticals</h4>
+        <div class="footer__links">
+          <a href="ai-deeptech.html" class="footer__link">AI &amp; Deep Tech</a>
+          <a href="fintech-web3.html" class="footer__link">FinTech &amp; Web3</a>
+          <a href="healthtech-biotech.html" class="footer__link">HealthTech &amp; BioTech</a>
+          <a href="climate-energy.html" class="footer__link">Climate &amp; Energy</a>
+          <a href="wearables-jewellery.html" class="footer__link">Wearables &amp; Jewellery</a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h4>Hub</h4>
+        <div class="footer__links">
+          <a href="about.html" class="footer__link">About</a>
+          <a href="contact.html" class="footer__link">Suggest a Resource</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom container">
+      <span class="footer__copy">© 2025 VentureLens. Curated by elizabeth053.</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
