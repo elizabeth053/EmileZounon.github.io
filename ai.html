@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI &amp; Deep Tech — Dealflow.fyi</title>
-  <meta name="description" content="Curated resources, deal flow, and startup directory for AI & Deep Tech — foundation models, robotics, semiconductors, and more." />
+  <title>AI — Dealflow.fyi</title>
+  <meta name="description" content="Curated resources, deal flow, and startup directory for AI — large language models, generative AI, multimodal systems, and intelligent infrastructure." />
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body data-industry="ai">
 
-  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">Dealflow<span>.fyi</span></a>
@@ -20,7 +19,7 @@
           <button class="nav__dropdown-btn">Verticals</button>
           <div class="nav__dropdown-menu">
           <a href="ai.html" class="nav__dropdown-link active">🤖 AI</a>
-          <a href="deeptech.html" class="nav__dropdown-link active">🔬 Deep Tech</a>
+          <a href="deeptech.html" class="nav__dropdown-link">🔬 Deep Tech</a>
           <a href="fintech.html" class="nav__dropdown-link">💳 FinTech</a>
           <a href="web3.html" class="nav__dropdown-link">⛓️ Web3</a>
           <a href="healthtech.html" class="nav__dropdown-link">🏥 HealthTech</a>
@@ -51,19 +50,17 @@
     </div>
   </nav>
 
-  <!-- INDUSTRY HERO -->
   <div class="industry-hero">
     <div class="industry-hero__inner">
-      <div class="industry-hero__icon">🧠</div>
+      <div class="industry-hero__icon">🤖</div>
       <div>
         <div class="industry-hero__label">Vertical</div>
-        <h1 class="industry-hero__title">AI &amp; Deep Tech</h1>
-        <p class="industry-hero__desc">Foundation models, robotics, semiconductor infrastructure, and the research powering the next wave of compute — curated resources, recent deals, and key players.</p>
+        <h1 class="industry-hero__title">AI</h1>
+        <p class="industry-hero__desc">Large language models, generative AI, multimodal systems, and the infrastructure platforms powering intelligent systems at scale — curated resources, recent deals, and key players.</p>
       </div>
     </div>
   </div>
 
-  <!-- TABS -->
   <div class="industry-tabs">
     <div class="industry-tabs__inner">
       <button class="tab-btn active" data-tab="resources">Resources</button>
@@ -72,14 +69,13 @@
     </div>
   </div>
 
-  <!-- ===== RESOURCES TAB ===== -->
   <div class="tab-panel active" id="tab-resources">
     <section class="section">
       <div class="container">
         <div class="section__header fade-in">
           <div class="section__label">Resources</div>
           <h2 class="section__title">Curated Tools &amp; Reading</h2>
-          <p class="section__subtitle">Reports, newsletters, databases, and tools for tracking the AI &amp; Deep Tech landscape.</p>
+          <p class="section__subtitle">Reports, newsletters, tools, and databases for tracking the AI landscape.</p>
         </div>
         <div class="grid grid--auto fade-in-children">
 
@@ -107,7 +103,7 @@
           <div class="resource-card">
             <span class="resource-card__type">Database</span>
             <div class="resource-card__name">Papers With Code</div>
-            <p class="resource-card__desc">Tracks machine learning research papers alongside their open-source implementations and benchmark performance — the fastest way to track SOTA.</p>
+            <p class="resource-card__desc">Tracks ML research papers alongside open-source implementations and benchmark performance — fastest way to track state of the art.</p>
             <a href="https://paperswithcode.com" target="_blank" rel="noopener" class="resource-card__link">Visit resource</a>
           </div>
 
@@ -130,16 +126,45 @@
     </section>
   </div>
 
-  <!-- ===== DEAL FLOW TAB ===== -->
   <div class="tab-panel" id="tab-deals">
     <section class="section">
       <div class="container">
         <div class="section__header fade-in">
           <div class="section__label">Deal Flow</div>
           <h2 class="section__title">Notable Funding Rounds</h2>
-          <p class="section__subtitle">Recent investment activity shaping the AI &amp; Deep Tech landscape.</p>
+          <p class="section__subtitle">Recent investment activity shaping the AI landscape.</p>
         </div>
         <div class="grid grid--auto fade-in-children">
+
+          <div class="deal-card">
+            <div class="deal-card__header">
+              <div class="deal-card__company">OpenAI</div>
+              <div class="deal-card__amount">$6.6B</div>
+            </div>
+            <div class="deal-card__meta">
+              <span class="deal-tag">LLM / AGI</span>
+            </div>
+            <p class="deal-card__desc">OpenAI raised the largest venture round in history, valuing the company at $157B — fuelling compute and model development.</p>
+            <div class="deal-card__footer">
+              <span class="deal-card__date">Oct 2024</span>
+              <a href="https://openai.com" target="_blank" rel="noopener" class="deal-card__source">View →</a>
+            </div>
+          </div>
+
+          <div class="deal-card">
+            <div class="deal-card__header">
+              <div class="deal-card__company">Anthropic</div>
+              <div class="deal-card__amount">$4B</div>
+            </div>
+            <div class="deal-card__meta">
+              <span class="deal-tag">AI Safety / LLM</span>
+            </div>
+            <p class="deal-card__desc">Amazon's $4B strategic investment in Anthropic, adding to an existing $1.25B commitment, cementing AWS as the primary cloud partner.</p>
+            <div class="deal-card__footer">
+              <span class="deal-card__date">Sep 2024</span>
+              <a href="https://anthropic.com" target="_blank" rel="noopener" class="deal-card__source">View →</a>
+            </div>
+          </div>
 
           <div class="deal-card">
             <div class="deal-card__header">
@@ -147,29 +172,12 @@
               <div class="deal-card__amount">$6B</div>
             </div>
             <div class="deal-card__meta">
-              <span class="deal-tag">Series B</span>
               <span class="deal-tag">LLM / AI</span>
             </div>
             <p class="deal-card__desc">Elon Musk's AI lab behind Grok raised at a $50B valuation, one of the largest AI rounds ever.</p>
             <div class="deal-card__footer">
               <span class="deal-card__date">Dec 2024</span>
-              <a href="https://techcrunch.com/2024/12/05/xai-raises-6-billion/" target="_blank" rel="noopener" class="deal-card__source">TechCrunch →</a>
-            </div>
-          </div>
-
-          <div class="deal-card">
-            <div class="deal-card__header">
-              <div class="deal-card__company">Wayve</div>
-              <div class="deal-card__amount">$1.05B</div>
-            </div>
-            <div class="deal-card__meta">
-              <span class="deal-tag">Series C</span>
-              <span class="deal-tag">Autonomous Driving</span>
-            </div>
-            <p class="deal-card__desc">Embodied AI startup for autonomous vehicles backed by SoftBank, Microsoft, and NVIDIA in a record UK round.</p>
-            <div class="deal-card__footer">
-              <span class="deal-card__date">May 2024</span>
-              <a href="https://wayve.ai" target="_blank" rel="noopener" class="deal-card__source">wayve.ai →</a>
+              <a href="https://techcrunch.com" target="_blank" rel="noopener" class="deal-card__source">View →</a>
             </div>
           </div>
 
@@ -179,45 +187,27 @@
               <div class="deal-card__amount">€600M</div>
             </div>
             <div class="deal-card__meta">
-              <span class="deal-tag">Series B</span>
               <span class="deal-tag">Foundation Models</span>
             </div>
             <p class="deal-card__desc">Paris-based open-weight model lab raised at a €6B valuation, cementing its position as Europe's leading AI frontier lab.</p>
             <div class="deal-card__footer">
               <span class="deal-card__date">Jun 2024</span>
-              <a href="https://mistral.ai" target="_blank" rel="noopener" class="deal-card__source">mistral.ai →</a>
+              <a href="https://mistral.ai" target="_blank" rel="noopener" class="deal-card__source">View →</a>
             </div>
           </div>
 
           <div class="deal-card">
             <div class="deal-card__header">
-              <div class="deal-card__company">Physical Intelligence (π)</div>
-              <div class="deal-card__amount">$400M</div>
+              <div class="deal-card__company">Cohere</div>
+              <div class="deal-card__amount">$500M</div>
             </div>
             <div class="deal-card__meta">
-              <span class="deal-tag">Series A</span>
-              <span class="deal-tag">Robotics / Embodied AI</span>
+              <span class="deal-tag">Enterprise AI</span>
             </div>
-            <p class="deal-card__desc">Robotics foundation model startup raised at a $2.4B valuation to build general-purpose robot intelligence.</p>
+            <p class="deal-card__desc">Enterprise-focused LLM platform raised to scale its Command and Embed models for Fortune 500 deployments.</p>
             <div class="deal-card__footer">
-              <span class="deal-card__date">Nov 2024</span>
-              <a href="https://physicalintelligence.company" target="_blank" rel="noopener" class="deal-card__source">physicalintelligence.company →</a>
-            </div>
-          </div>
-
-          <div class="deal-card">
-            <div class="deal-card__header">
-              <div class="deal-card__company">Groq</div>
-              <div class="deal-card__amount">$640M</div>
-            </div>
-            <div class="deal-card__meta">
-              <span class="deal-tag">Series D</span>
-              <span class="deal-tag">AI Chips / Inference</span>
-            </div>
-            <p class="deal-card__desc">Inference chip startup raised to scale production of its Language Processing Unit (LPU), targeting low-latency AI workloads.</p>
-            <div class="deal-card__footer">
-              <span class="deal-card__date">Aug 2024</span>
-              <a href="https://groq.com" target="_blank" rel="noopener" class="deal-card__source">groq.com →</a>
+              <span class="deal-card__date">Jul 2024</span>
+              <a href="https://cohere.com" target="_blank" rel="noopener" class="deal-card__source">View →</a>
             </div>
           </div>
 
@@ -226,14 +216,13 @@
     </section>
   </div>
 
-  <!-- ===== DIRECTORY TAB ===== -->
   <div class="tab-panel" id="tab-directory">
     <section class="section">
       <div class="container">
         <div class="section__header fade-in">
           <div class="section__label">Directory</div>
           <h2 class="section__title">Notable Companies</h2>
-          <p class="section__subtitle">Key players building across AI, robotics, and deep tech infrastructure.</p>
+          <p class="section__subtitle">Key players building foundation models and AI platforms.</p>
         </div>
         <div class="grid grid--auto fade-in-children">
 
@@ -251,6 +240,18 @@
 
           <div class="dir-card">
             <div class="dir-card__header">
+              <div class="dir-card__name">OpenAI</div>
+              <span class="dir-card__stage">Late Stage</span>
+            </div>
+            <p class="dir-card__tagline">Creator of GPT-4 and ChatGPT — the most widely deployed AI platform, powering consumer and enterprise applications globally.</p>
+            <div class="dir-card__footer">
+              <span class="dir-card__hq">📍 San Francisco, CA</span>
+              <a href="https://openai.com" target="_blank" rel="noopener" class="dir-card__link">Visit site</a>
+            </div>
+          </div>
+
+          <div class="dir-card">
+            <div class="dir-card__header">
               <div class="dir-card__name">Mistral AI</div>
               <span class="dir-card__stage">Series B</span>
             </div>
@@ -263,34 +264,10 @@
 
           <div class="dir-card">
             <div class="dir-card__header">
-              <div class="dir-card__name">Figure AI</div>
-              <span class="dir-card__stage">Series B</span>
-            </div>
-            <p class="dir-card__tagline">General-purpose humanoid robotics company building Figure 01 — targeting commercial deployment in manufacturing and logistics.</p>
-            <div class="dir-card__footer">
-              <span class="dir-card__hq">📍 Sunnyvale, CA</span>
-              <a href="https://figure.ai" target="_blank" rel="noopener" class="dir-card__link">Visit site</a>
-            </div>
-          </div>
-
-          <div class="dir-card">
-            <div class="dir-card__header">
-              <div class="dir-card__name">Groq</div>
+              <div class="dir-card__name">Cohere</div>
               <span class="dir-card__stage">Series D</span>
             </div>
-            <p class="dir-card__tagline">AI inference chip company with its Language Processing Unit (LPU) delivering dramatically lower latency for LLM serving at scale.</p>
-            <div class="dir-card__footer">
-              <span class="dir-card__hq">📍 Mountain View, CA</span>
-              <a href="https://groq.com" target="_blank" rel="noopener" class="dir-card__link">Visit site</a>
-            </div>
-          </div>
-
-          <div class="dir-card">
-            <div class="dir-card__header">
-              <div class="dir-card__name">Cohere</div>
-              <span class="dir-card__stage">Series C</span>
-            </div>
-            <p class="dir-card__tagline">Enterprise-focused AI platform offering LLMs, embeddings, and retrieval models with a strong focus on data privacy and deployment flexibility.</p>
+            <p class="dir-card__tagline">Enterprise-focused AI platform offering LLMs, embeddings, and retrieval models with strong data privacy and deployment flexibility.</p>
             <div class="dir-card__footer">
               <span class="dir-card__hq">📍 Toronto, Canada</span>
               <a href="https://cohere.com" target="_blank" rel="noopener" class="dir-card__link">Visit site</a>
@@ -299,13 +276,25 @@
 
           <div class="dir-card">
             <div class="dir-card__header">
-              <div class="dir-card__name">Wayve</div>
-              <span class="dir-card__stage">Series C</span>
+              <div class="dir-card__name">Inflection AI</div>
+              <span class="dir-card__stage">Series B</span>
             </div>
-            <p class="dir-card__tagline">Embodied AI company building foundation models for autonomous vehicles — uses learned driving models rather than rule-based systems.</p>
+            <p class="dir-card__tagline">AI studio focused on personal AI and conversational intelligence — creators of Pi.</p>
             <div class="dir-card__footer">
-              <span class="dir-card__hq">📍 London, UK</span>
-              <a href="https://wayve.ai" target="_blank" rel="noopener" class="dir-card__link">Visit site</a>
+              <span class="dir-card__hq">📍 Palo Alto, CA</span>
+              <a href="https://inflection.ai" target="_blank" rel="noopener" class="dir-card__link">Visit site</a>
+            </div>
+          </div>
+
+          <div class="dir-card">
+            <div class="dir-card__header">
+              <div class="dir-card__name">xAI</div>
+              <span class="dir-card__stage">Series B</span>
+            </div>
+            <p class="dir-card__tagline">Elon Musk's AI lab building Grok — a real-time, truth-seeking AI assistant integrated with the X platform.</p>
+            <div class="dir-card__footer">
+              <span class="dir-card__hq">📍 San Francisco, CA</span>
+              <a href="https://x.ai" target="_blank" rel="noopener" class="dir-card__link">Visit site</a>
             </div>
           </div>
 
@@ -314,7 +303,6 @@
     </section>
   </div>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand">
@@ -346,6 +334,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2305c80"></script>
 </body>
 </html>
