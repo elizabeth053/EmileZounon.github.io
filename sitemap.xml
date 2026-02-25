@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://elizabeth053.github.io/EmileZounon.github.io/</loc>
+    <loc>https://elizabeth053.github.io/the-briefing/</loc>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://elizabeth053.github.io/EmileZounon.github.io/ai-deeptech.html</loc>
+    <loc>https://elizabeth053.github.io/the-briefing/ai.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://elizabeth053.github.io/EmileZounon.github.io/fintech-web3.html</loc>
+    <loc>https://elizabeth053.github.io/the-briefing/deeptech.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://elizabeth053.github.io/EmileZounon.github.io/healthtech-biotech.html</loc>
+    <loc>https://elizabeth053.github.io/the-briefing/fintech.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://elizabeth053.github.io/EmileZounon.github.io/climate-energy.html</loc>
+    <loc>https://elizabeth053.github.io/the-briefing/web3.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://elizabeth053.github.io/EmileZounon.github.io/wearables-jewellery.html</loc>
+    <loc>https://elizabeth053.github.io/the-briefing/healthtech.html</loc>
     <priority>0.9</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://elizabeth053.github.io/EmileZounon.github.io/news-sources.html</loc>
+    <loc>https://elizabeth053.github.io/the-briefing/biotech.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://elizabeth053.github.io/the-briefing/energy.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://elizabeth053.github.io/the-briefing/wearables-jewellery.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://elizabeth053.github.io/the-briefing/news-sources.html</loc>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
