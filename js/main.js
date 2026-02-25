@@ -147,7 +147,8 @@
     { name: 'VentureBeat',  color: '#7C3AED', url: 'https://venturebeat.com/feed/'                                      },
     { name: 'The Economist', color: '#059669', url: 'https://www.economist.com/finance-and-economics/rss.xml'            },
     { name: 'CNBC',         color: '#0891B2', url: 'https://www.cnbc.com/id/100003114/device/rss/rss.html'              },
-    { name: 'Biz Insider',  color: '#DC2626', url: 'https://feeds.businessinsider.com/custom/all'                       }
+    { name: 'Biz Insider',  color: '#DC2626', url: 'https://feeds.businessinsider.com/custom/all'                       },
+    { name: 'Financial Times', color: '#C84B31', url: 'https://www.ft.com/rss/home'                                     }
   ];
 
   var API = 'https://api.rss2json.com/v1/api.json?rss_url=';
