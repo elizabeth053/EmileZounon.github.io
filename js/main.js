@@ -157,8 +157,8 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (!data.items) return [];
-        // Cap at 3 articles per source so no feed dominates
-        return data.items.slice(0, 3).map(function (item) {
+        // Fetch up to 6 per source (shown in full when that source is selected)
+        return data.items.slice(0, 6).map(function (item) {
           return {
             title:  item.title,
             link:   item.link,
@@ -175,8 +175,8 @@
     return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
   }
 
-  function renderCard(a) {
-    return '<div class="news-card" style="--news-color:' + a.color + ';">' +
+  function renderCard(a, hidden) {
+    return '<div class="news-card' + (hidden ? ' news-card--hidden' : '') + '" data-source="' + a.source + '" style="--news-color:' + a.color + ';">' +
       '<div class="news-card__meta">' +
         '<span class="news-tag" style="background:' + a.color + ';">' + a.source + '</span>' +
         '<span class="news-card__date">' + fmt(a.date) + '</span>' +
@@ -187,19 +187,58 @@
   }
 
   Promise.all(FEEDS.map(fetchFeed)).then(function (results) {
-    var articles = [];
-    results.forEach(function (r) { articles = articles.concat(r); });
+    var allArticles = [];
+    results.forEach(function (r) { allArticles = allArticles.concat(r); });
 
-    if (articles.length === 0) {
+    if (allArticles.length === 0) {
       grid.innerHTML = '';
       if (errorEl) errorEl.style.display = '';
       return;
     }
 
-    // Sort newest first, take top 12
-    articles.sort(function (a, b) { return b.date - a.date; });
-    articles = articles.slice(0, 12);
+    // Sort all articles newest first
+    allArticles.sort(function (a, b) { return b.date - a.date; });
 
-    grid.innerHTML = articles.map(renderCard).join('');
+    // Render all articles — only top 12 visible in "All" mode, rest hidden
+    grid.innerHTML = allArticles.map(function (a, i) {
+      return renderCard(a, i >= 12);
+    }).join('');
+
+    // ── Source filter pills ──────────────────────────────────
+    var pills = document.querySelectorAll('.news-source-pill[data-source]');
+
+    pills.forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        var source = pill.dataset.source;
+
+        // Update active pill
+        pills.forEach(function (p) { p.classList.remove('active'); });
+        pill.classList.add('active');
+
+        var cards = grid.querySelectorAll('.news-card');
+
+        if (source === 'all') {
+          // Show top 12 across all sources
+          var shown = 0;
+          cards.forEach(function (card) {
+            if (shown < 12) {
+              card.classList.remove('news-card--hidden');
+              shown++;
+            } else {
+              card.classList.add('news-card--hidden');
+            }
+          });
+        } else {
+          // Show all fetched articles from this source
+          cards.forEach(function (card) {
+            if (card.dataset.source === source) {
+              card.classList.remove('news-card--hidden');
+            } else {
+              card.classList.add('news-card--hidden');
+            }
+          });
+        }
+      });
+    });
   });
 }());

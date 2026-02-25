@@ -858,11 +858,26 @@ textarea { resize: vertical; min-height: 120px; }
   font-weight: 700;
   letter-spacing: 0.07em;
   text-transform: uppercase;
-  padding: 0.25rem 0.75rem;
+  padding: 0.3rem 0.85rem;
   border-radius: 999px;
+  border: 2px solid transparent;
   background: var(--pill, #4F46E5);
   color: #fff;
-  opacity: 0.85;
+  opacity: 0.45;
+  cursor: pointer;
+  font-family: var(--font-body);
+  transition: opacity 0.15s, transform 0.1s, box-shadow 0.15s;
+  white-space: nowrap;
+}
+
+.news-source-pill:hover {
+  opacity: 0.75;
+}
+
+.news-source-pill.active {
+  opacity: 1;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px var(--pill, #4F46E5);
+  transform: scale(1.04);
 }
 
 .news-card {
@@ -926,6 +941,8 @@ textarea { resize: vertical; min-height: 120px; }
   margin-top: 0.25rem;
 }
 .news-card__link:hover { text-decoration: underline; }
+
+.news-card--hidden { display: none; }
 
 /* Skeleton shimmer */
 .news-card--skeleton {
