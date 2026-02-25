@@ -74,6 +74,35 @@
     </div>
   </section>
 
+  <!-- ===== TODAY'S TOP STORIES ===== -->
+  <section class="section section--alt" id="news">
+    <div class="container">
+      <div class="section__header fade-in">
+        <div class="section__label" style="--accent: var(--accent-ai);">Live Feed</div>
+        <h2 class="section__title">Today's Top Stories</h2>
+        <p class="section__subtitle" id="news-date">Business, economics &amp; venture news — loading…</p>
+      </div>
+      <div class="news-sources-bar fade-in">
+        <span class="news-source-pill" style="--pill: #4F46E5;">TechCrunch</span>
+        <span class="news-source-pill" style="--pill: #059669;">Reuters Business</span>
+        <span class="news-source-pill" style="--pill: #7C3AED;">VentureBeat</span>
+      </div>
+      <div id="news-grid" class="grid grid--news">
+        <!-- skeleton cards, replaced by JS -->
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+        <div class="news-card news-card--skeleton"><div class="sk sk--tag"></div><div class="sk sk--title"></div><div class="sk sk--title sk--short"></div><div class="sk sk--link"></div></div>
+      </div>
+      <p id="news-error" style="display:none; text-align:center; color:var(--color-text-muted); padding:2rem 0;">Unable to load live news right now. Visit <a href="https://techcrunch.com" target="_blank" rel="noopener">TechCrunch</a>, <a href="https://reuters.com/business" target="_blank" rel="noopener">Reuters</a>, or <a href="https://venturebeat.com" target="_blank" rel="noopener">VentureBeat</a> directly.</p>
+    </div>
+  </section>
+
   <!-- ===== BROWSE BY VERTICAL ===== -->
   <section class="section" id="verticals">
     <div class="container">

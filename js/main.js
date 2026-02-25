@@ -120,3 +120,80 @@
   });
 
 })();
+
+// ============================================================
+//  Live News Feed — Today's Top Stories
+// ============================================================
+(function initNewsFeed() {
+  var grid    = document.getElementById('news-grid');
+  var errorEl = document.getElementById('news-error');
+  var dateEl  = document.getElementById('news-date');
+  if (!grid) return;
+
+  // Display today's date in the subtitle
+  if (dateEl) {
+    var d = new Date();
+    var opts = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    dateEl.textContent = 'Business, economics & venture news — ' +
+      d.toLocaleDateString('en-GB', opts);
+  }
+
+  // RSS sources — fetched via rss2json.com (free, no key required for these feeds)
+  var FEEDS = [
+    { name: 'TechCrunch',       color: '#4F46E5', url: 'https://techcrunch.com/feed/'                           },
+    { name: 'Reuters Biz',      color: '#059669', url: 'https://feeds.reuters.com/reuters/businessNews'          },
+    { name: 'VentureBeat',      color: '#7C3AED', url: 'https://venturebeat.com/feed/'                          }
+  ];
+
+  var API = 'https://api.rss2json.com/v1/api.json?count=5&rss_url=';
+
+  function fetchFeed(feed) {
+    return fetch(API + encodeURIComponent(feed.url))
+      .then(function (r) { return r.json(); })
+      .then(function (data) {
+        if (!data.items) return [];
+        return data.items.slice(0, 4).map(function (item) {
+          return {
+            title:  item.title,
+            link:   item.link,
+            date:   new Date(item.pubDate),
+            source: feed.name,
+            color:  feed.color
+          };
+        });
+      })
+      .catch(function () { return []; });
+  }
+
+  function fmt(date) {
+    return date.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  }
+
+  function renderCard(a) {
+    return '<div class="news-card" style="--news-color:' + a.color + ';">' +
+      '<div class="news-card__meta">' +
+        '<span class="news-tag" style="background:' + a.color + ';">' + a.source + '</span>' +
+        '<span class="news-card__date">' + fmt(a.date) + '</span>' +
+      '</div>' +
+      '<div class="news-card__title">' + a.title + '</div>' +
+      '<a href="' + a.link + '" target="_blank" rel="noopener" class="news-card__link">Read story →</a>' +
+    '</div>';
+  }
+
+  Promise.all(FEEDS.map(fetchFeed)).then(function (results) {
+    var articles = [];
+    results.forEach(function (r) { articles = articles.concat(r); });
+
+    if (articles.length === 0) {
+      grid.innerHTML = '';
+      if (errorEl) errorEl.style.display = '';
+      return;
+    }
+
+    // Sort newest first, take top 9
+    articles.sort(function (a, b) { return b.date - a.date; });
+    articles = articles.slice(0, 9);
+
+    grid.innerHTML = articles.map(renderCard).join('');
+  });
+}());
