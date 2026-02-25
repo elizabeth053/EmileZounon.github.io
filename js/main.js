@@ -138,14 +138,14 @@
       d.toLocaleDateString('en-GB', opts);
   }
 
-  // RSS sources — fetched via rss2json.com (free, no key required for these feeds)
+  // RSS sources — fetched via rss2json.com (free tier, no key needed, no count param)
   var FEEDS = [
-    { name: 'TechCrunch',       color: '#4F46E5', url: 'https://techcrunch.com/feed/'                           },
-    { name: 'Reuters Biz',      color: '#059669', url: 'https://feeds.reuters.com/reuters/businessNews'          },
-    { name: 'VentureBeat',      color: '#7C3AED', url: 'https://venturebeat.com/feed/'                          }
+    { name: 'TechCrunch',  color: '#4F46E5', url: 'https://techcrunch.com/category/startups/feed/' },
+    { name: 'The Economist', color: '#059669', url: 'https://www.economist.com/finance-and-economics/rss.xml' },
+    { name: 'VentureBeat', color: '#7C3AED', url: 'https://venturebeat.com/feed/' }
   ];
 
-  var API = 'https://api.rss2json.com/v1/api.json?count=5&rss_url=';
+  var API = 'https://api.rss2json.com/v1/api.json?rss_url=';
 
   function fetchFeed(feed) {
     return fetch(API + encodeURIComponent(feed.url))
