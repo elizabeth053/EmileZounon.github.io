@@ -140,9 +140,14 @@
 
   // RSS sources — fetched via rss2json.com (free tier, no key needed, no count param)
   var FEEDS = [
-    { name: 'TechCrunch',  color: '#4F46E5', url: 'https://techcrunch.com/category/startups/feed/' },
-    { name: 'The Economist', color: '#059669', url: 'https://www.economist.com/finance-and-economics/rss.xml' },
-    { name: 'VentureBeat', color: '#7C3AED', url: 'https://venturebeat.com/feed/' }
+    { name: 'NY Times',      color: '#1a1a1a', url: 'https://rss.nytimes.com/services/xml/rss/nyt/Business.xml'          },
+    { name: 'Bloomberg',     color: '#1D4ED8', url: 'https://feeds.bloomberg.com/markets/news.rss'                       },
+    { name: 'TechCrunch',   color: '#4F46E5', url: 'https://techcrunch.com/category/startups/feed/'                     },
+    { name: 'Hacker News',  color: '#F97316', url: 'https://news.ycombinator.com/rss'                                   },
+    { name: 'VentureBeat',  color: '#7C3AED', url: 'https://venturebeat.com/feed/'                                      },
+    { name: 'The Economist', color: '#059669', url: 'https://www.economist.com/finance-and-economics/rss.xml'            },
+    { name: 'CNBC',         color: '#0891B2', url: 'https://www.cnbc.com/id/100003114/device/rss/rss.html'              },
+    { name: 'Biz Insider',  color: '#DC2626', url: 'https://feeds.businessinsider.com/custom/all'                       }
   ];
 
   var API = 'https://api.rss2json.com/v1/api.json?rss_url=';
@@ -152,7 +157,8 @@
       .then(function (r) { return r.json(); })
       .then(function (data) {
         if (!data.items) return [];
-        return data.items.slice(0, 4).map(function (item) {
+        // Cap at 3 articles per source so no feed dominates
+        return data.items.slice(0, 3).map(function (item) {
           return {
             title:  item.title,
             link:   item.link,
@@ -190,9 +196,9 @@
       return;
     }
 
-    // Sort newest first, take top 9
+    // Sort newest first, take top 12
     articles.sort(function (a, b) { return b.date - a.date; });
-    articles = articles.slice(0, 9);
+    articles = articles.slice(0, 12);
 
     grid.innerHTML = articles.map(renderCard).join('');
   });
