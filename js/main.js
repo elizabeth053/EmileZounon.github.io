@@ -152,6 +152,37 @@
 
   var API = 'https://api.rss2json.com/v1/api.json?rss_url=';
 
+  // ── Pill filter handlers — attached immediately, before RSS loads ──
+  var pills = document.querySelectorAll('.news-source-pill[data-source]');
+  var activeSource = 'all';
+
+  function applyFilter(source) {
+    activeSource = source;
+    var cards = grid.querySelectorAll('.news-card:not(.news-card--skeleton)');
+    if (cards.length === 0) return; // cards not rendered yet — re-applied after load
+
+    if (source === 'all') {
+      var shown = 0;
+      cards.forEach(function (card) {
+        if (shown < 12) { card.classList.remove('news-card--hidden'); shown++; }
+        else { card.classList.add('news-card--hidden'); }
+      });
+    } else {
+      cards.forEach(function (card) {
+        if (card.dataset.source === source) card.classList.remove('news-card--hidden');
+        else card.classList.add('news-card--hidden');
+      });
+    }
+  }
+
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      pills.forEach(function (p) { p.classList.remove('active'); });
+      pill.classList.add('active');
+      applyFilter(pill.dataset.source);
+    });
+  });
+
   function fetchFeed(feed) {
     return fetch(API + encodeURIComponent(feed.url))
       .then(function (r) { return r.json(); })
@@ -199,46 +230,12 @@
     // Sort all articles newest first
     allArticles.sort(function (a, b) { return b.date - a.date; });
 
-    // Render all articles — only top 12 visible in "All" mode, rest hidden
-    grid.innerHTML = allArticles.map(function (a, i) {
-      return renderCard(a, i >= 12);
+    // Render all articles — hidden state will be set by applyFilter
+    grid.innerHTML = allArticles.map(function (a) {
+      return renderCard(a, true); // start all hidden; applyFilter reveals the right ones
     }).join('');
 
-    // ── Source filter pills ──────────────────────────────────
-    var pills = document.querySelectorAll('.news-source-pill[data-source]');
-
-    pills.forEach(function (pill) {
-      pill.addEventListener('click', function () {
-        var source = pill.dataset.source;
-
-        // Update active pill
-        pills.forEach(function (p) { p.classList.remove('active'); });
-        pill.classList.add('active');
-
-        var cards = grid.querySelectorAll('.news-card');
-
-        if (source === 'all') {
-          // Show top 12 across all sources
-          var shown = 0;
-          cards.forEach(function (card) {
-            if (shown < 12) {
-              card.classList.remove('news-card--hidden');
-              shown++;
-            } else {
-              card.classList.add('news-card--hidden');
-            }
-          });
-        } else {
-          // Show all fetched articles from this source
-          cards.forEach(function (card) {
-            if (card.dataset.source === source) {
-              card.classList.remove('news-card--hidden');
-            } else {
-              card.classList.add('news-card--hidden');
-            }
-          });
-        }
-      });
-    });
+    // Apply whichever filter the user may have already clicked, or default "all"
+    applyFilter(activeSource);
   });
 }());
